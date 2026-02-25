@@ -8,7 +8,7 @@ export function TopBrandBar() {
     >
       <div
         className="w-full flex items-center justify-center"
-        style={{ maxWidth: 460, height: 72 }}
+        style={{ maxWidth: 460, height: 80 }}
       >
         <img
           src={logoImg}

@@ -10,7 +10,7 @@ export function ProgressRing({
   percentage,
   size = 132,
   strokeWidth = 11,
-  color = '#7f15a8',
+  color = '#6365b9',
   trackColor = '#eeeeee',
 }: ProgressRingProps) {
   const radius = (size - strokeWidth) / 2;
@@ -54,4 +54,5 @@ export function ProgressRing({
     </div>
   );
 }
+
 

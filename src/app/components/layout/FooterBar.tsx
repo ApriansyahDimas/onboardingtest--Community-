@@ -28,7 +28,7 @@ export function FooterBar() {
     >
       <div
         className="w-full flex items-center justify-between px-4"
-        style={{ maxWidth: 460, height: 64 }}
+        style={{ maxWidth: 460, height: 84 }}
       >
         {/* Left: Admin mode toggle */}
         <div className="flex items-center gap-2">
@@ -64,8 +64,8 @@ export function FooterBar() {
         {/* Center: Company logo */}
         <div className="flex items-center justify-center">
           <span
-            className="text-[#7f15a8]"
-            style={{ fontWeight: 800, fontSize: '1rem', letterSpacing: '-0.02em' }}
+            className="text-[#6365b9]"
+            style={{ fontWeight: 800, fontSize: '1.85rem', letterSpacing: '-0.02em' }}
           >
             Company
           </span>
@@ -93,6 +93,7 @@ export function FooterBar() {
     </div>
   );
 }
+
 
 
 

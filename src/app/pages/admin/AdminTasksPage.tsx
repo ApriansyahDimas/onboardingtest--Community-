@@ -39,16 +39,16 @@ export function AdminTasksPage() {
         <button
           type="button"
           onClick={handleCreateTask}
-          className="w-full border-2 border-dashed border-[#eeeeee] rounded-xl flex flex-col items-center justify-center transition-colors hover:border-[#7f15a8] hover-brand-gradient-bg-soft"
+          className="w-full border-2 border-dashed border-[#eeeeee] rounded-xl flex flex-col items-center justify-center transition-colors hover:border-[#6365b9] hover-brand-gradient-bg-soft"
           style={{ height: 120 }}
         >
           <div
             className="flex items-center justify-center rounded-full mb-2"
             style={{ width: 44, height: 44, background: 'var(--brand-gradient-soft)' }}
           >
-            <Plus size={22} className="text-[#7f15a8]" />
+            <Plus size={22} className="text-[#6365b9]" />
           </div>
-          <span className="text-sm text-[#7f15a8]" style={{ fontWeight: 600 }}>
+          <span className="text-sm text-[#6365b9]" style={{ fontWeight: 600 }}>
             Create your first task
           </span>
         </button>
@@ -64,11 +64,11 @@ export function AdminTasksPage() {
           <button
             type="button"
             onClick={handleCreateTask}
-            className="w-full border-2 border-dashed border-[#eeeeee] rounded-xl flex items-center justify-center transition-colors hover:border-[#7f15a8] hover-brand-gradient-bg-soft"
+            className="w-full border-2 border-dashed border-[#eeeeee] rounded-xl flex items-center justify-center transition-colors hover:border-[#6365b9] hover-brand-gradient-bg-soft"
             style={{ height: 56 }}
           >
-            <Plus size={16} className="text-[#7f15a8] mr-2" />
-            <span className="text-sm text-[#7f15a8]" style={{ fontWeight: 500 }}>
+            <Plus size={16} className="text-[#6365b9] mr-2" />
+            <span className="text-sm text-[#6365b9]" style={{ fontWeight: 500 }}>
               Add task
             </span>
           </button>
@@ -77,6 +77,7 @@ export function AdminTasksPage() {
     </div>
   );
 }
+
 
 
 

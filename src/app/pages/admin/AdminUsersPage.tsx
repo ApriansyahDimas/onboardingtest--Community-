@@ -225,7 +225,7 @@ export function AdminUsersPage() {
                 </div>
                 <span
                   className="text-xs px-2 py-1 rounded-full"
-                  style={{ background: 'var(--brand-gradient-soft)', color: '#7f15a8', fontWeight: 600 }}
+                  style={{ background: 'var(--brand-gradient-soft)', color: '#6365b9', fontWeight: 600 }}
                 >
                   USER
                 </span>
@@ -240,7 +240,7 @@ export function AdminUsersPage() {
                 onChange={(e) =>
                   setNewUserForm((prev) => ({ ...prev, name: e.target.value }))
                 }
-                className="w-full border border-[#eeeeee] rounded-xl px-3 py-2.5 text-sm text-[#111111] outline-none focus:border-[#7f15a8]"
+                className="w-full border border-[#eeeeee] rounded-xl px-3 py-2.5 text-sm text-[#111111] outline-none focus:border-[#6365b9]"
                 required
               />
               <input
@@ -250,7 +250,7 @@ export function AdminUsersPage() {
                 onChange={(e) =>
                   setNewUserForm((prev) => ({ ...prev, email: e.target.value }))
                 }
-                className="w-full border border-[#eeeeee] rounded-xl px-3 py-2.5 text-sm text-[#111111] outline-none focus:border-[#7f15a8]"
+                className="w-full border border-[#eeeeee] rounded-xl px-3 py-2.5 text-sm text-[#111111] outline-none focus:border-[#6365b9]"
                 required
               />
               <input
@@ -260,7 +260,7 @@ export function AdminUsersPage() {
                 onChange={(e) =>
                   setNewUserForm((prev) => ({ ...prev, password: e.target.value }))
                 }
-                className="w-full border border-[#eeeeee] rounded-xl px-3 py-2.5 text-sm text-[#111111] outline-none focus:border-[#7f15a8]"
+                className="w-full border border-[#eeeeee] rounded-xl px-3 py-2.5 text-sm text-[#111111] outline-none focus:border-[#6365b9]"
                 required
               />
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -271,7 +271,7 @@ export function AdminUsersPage() {
                   onChange={(e) =>
                     setNewUserForm((prev) => ({ ...prev, department: e.target.value }))
                   }
-                  className="w-full border border-[#eeeeee] rounded-xl px-3 py-2.5 text-sm text-[#111111] outline-none focus:border-[#7f15a8]"
+                  className="w-full border border-[#eeeeee] rounded-xl px-3 py-2.5 text-sm text-[#111111] outline-none focus:border-[#6365b9]"
                 />
                 <input
                   type="text"
@@ -280,7 +280,7 @@ export function AdminUsersPage() {
                   onChange={(e) =>
                     setNewUserForm((prev) => ({ ...prev, position: e.target.value }))
                   }
-                  className="w-full border border-[#eeeeee] rounded-xl px-3 py-2.5 text-sm text-[#111111] outline-none focus:border-[#7f15a8]"
+                  className="w-full border border-[#eeeeee] rounded-xl px-3 py-2.5 text-sm text-[#111111] outline-none focus:border-[#6365b9]"
                 />
               </div>
               <div className="flex items-center gap-3">
@@ -298,7 +298,7 @@ export function AdminUsersPage() {
                   onChange={(e) =>
                     setNewUserForm((prev) => ({ ...prev, joinDate: e.target.value }))
                   }
-                  className="flex-1 border border-[#eeeeee] rounded-xl px-3 py-2.5 text-sm text-[#111111] outline-none focus:border-[#7f15a8]"
+                  className="flex-1 border border-[#eeeeee] rounded-xl px-3 py-2.5 text-sm text-[#111111] outline-none focus:border-[#6365b9]"
                 />
               </div>
 
@@ -367,7 +367,7 @@ export function AdminUsersPage() {
                   {daysOnboarded !== null && (
                     <span
                       className="text-xs px-2 py-0.5 rounded-full flex-shrink-0"
-                      style={{ background: 'var(--brand-gradient-soft)', color: '#7f15a8', fontWeight: 600 }}
+                      style={{ background: 'var(--brand-gradient-soft)', color: '#6365b9', fontWeight: 600 }}
                     >
                       Day {daysOnboarded}
                     </span>
@@ -431,7 +431,7 @@ export function AdminUsersPage() {
                     <button
                       type="button"
                       onClick={() => addGroup(user.id)}
-                      className="w-full mt-4 flex items-center justify-center gap-2 py-2.5 rounded-xl border-2 border-dashed border-[#eeeeee] text-sm text-[#7f15a8] hover:border-[#7f15a8] hover-brand-gradient-bg-soft transition-colors"
+                      className="w-full mt-4 flex items-center justify-center gap-2 py-2.5 rounded-xl border-2 border-dashed border-[#eeeeee] text-sm text-[#6365b9] hover:border-[#6365b9] hover-brand-gradient-bg-soft transition-colors"
                       style={{ fontWeight: 500 }}
                     >
                       <Plus size={14} />
@@ -604,7 +604,7 @@ function UserInfoBar({ user }: { user: User }) {
                   onChange={(e) =>
                     setEditForm((prev) => ({ ...prev, name: e.target.value }))
                   }
-                  className="w-full border border-[#eeeeee] rounded-xl px-3 py-2.5 text-sm text-[#111111] outline-none focus:border-[#7f15a8]"
+                  className="w-full border border-[#eeeeee] rounded-xl px-3 py-2.5 text-sm text-[#111111] outline-none focus:border-[#6365b9]"
                   required
                 />
                 <input
@@ -614,7 +614,7 @@ function UserInfoBar({ user }: { user: User }) {
                   onChange={(e) =>
                     setEditForm((prev) => ({ ...prev, email: e.target.value }))
                   }
-                  className="w-full border border-[#eeeeee] rounded-xl px-3 py-2.5 text-sm text-[#111111] outline-none focus:border-[#7f15a8]"
+                  className="w-full border border-[#eeeeee] rounded-xl px-3 py-2.5 text-sm text-[#111111] outline-none focus:border-[#6365b9]"
                   required
                 />
               </div>
@@ -627,7 +627,7 @@ function UserInfoBar({ user }: { user: User }) {
                   onChange={(e) =>
                     setEditForm((prev) => ({ ...prev, department: e.target.value }))
                   }
-                  className="w-full border border-[#eeeeee] rounded-xl px-3 py-2.5 text-sm text-[#111111] outline-none focus:border-[#7f15a8]"
+                  className="w-full border border-[#eeeeee] rounded-xl px-3 py-2.5 text-sm text-[#111111] outline-none focus:border-[#6365b9]"
                 />
                 <input
                   type="text"
@@ -636,7 +636,7 @@ function UserInfoBar({ user }: { user: User }) {
                   onChange={(e) =>
                     setEditForm((prev) => ({ ...prev, position: e.target.value }))
                   }
-                  className="w-full border border-[#eeeeee] rounded-xl px-3 py-2.5 text-sm text-[#111111] outline-none focus:border-[#7f15a8]"
+                  className="w-full border border-[#eeeeee] rounded-xl px-3 py-2.5 text-sm text-[#111111] outline-none focus:border-[#6365b9]"
                 />
               </div>
 
@@ -656,7 +656,7 @@ function UserInfoBar({ user }: { user: User }) {
                     onChange={(e) =>
                       setEditForm((prev) => ({ ...prev, joinDate: e.target.value }))
                     }
-                    className="flex-1 border border-[#eeeeee] rounded-xl px-3 py-2.5 text-sm text-[#111111] outline-none focus:border-[#7f15a8]"
+                    className="flex-1 border border-[#eeeeee] rounded-xl px-3 py-2.5 text-sm text-[#111111] outline-none focus:border-[#6365b9]"
                   />
                 </div>
                 <input
@@ -666,7 +666,7 @@ function UserInfoBar({ user }: { user: User }) {
                   onChange={(e) =>
                     setEditForm((prev) => ({ ...prev, phone: e.target.value }))
                   }
-                  className="w-full border border-[#eeeeee] rounded-xl px-3 py-2.5 text-sm text-[#111111] outline-none focus:border-[#7f15a8]"
+                  className="w-full border border-[#eeeeee] rounded-xl px-3 py-2.5 text-sm text-[#111111] outline-none focus:border-[#6365b9]"
                 />
               </div>
 
@@ -678,7 +678,7 @@ function UserInfoBar({ user }: { user: User }) {
                   onChange={(e) =>
                     setEditForm((prev) => ({ ...prev, password: e.target.value }))
                   }
-                  className="w-full border border-[#eeeeee] rounded-xl px-3 py-2.5 text-sm text-[#111111] outline-none focus:border-[#7f15a8]"
+                  className="w-full border border-[#eeeeee] rounded-xl px-3 py-2.5 text-sm text-[#111111] outline-none focus:border-[#6365b9]"
                 />
                 <p className="mt-1 text-xs text-[#999999]">
                   Leave blank to keep the current password.
@@ -740,7 +740,7 @@ function InfoTile({
       </p>
       <p
         className="text-sm mt-0.5 break-words"
-        style={{ color: accent ? '#7f15a8' : '#111111', fontWeight: accent ? 700 : 600 }}
+        style={{ color: accent ? '#6365b9' : '#111111', fontWeight: accent ? 700 : 600 }}
       >
         {value}
       </p>
@@ -841,14 +841,14 @@ function TaskGroupEditor({
                 setNameValue(group.name);
               }
             }}
-            className="flex-1 text-sm text-[#111111] border-b border-[#7f15a8] outline-none bg-transparent py-0.5"
+            className="flex-1 text-sm text-[#111111] border-b border-[#6365b9] outline-none bg-transparent py-0.5"
             style={{ fontWeight: 700 }}
           />
         ) : (
           <button
             type="button"
             onClick={() => setEditingName(true)}
-            className="flex-1 text-left text-[#111111] text-sm hover:text-[#7f15a8] transition-colors"
+            className="flex-1 text-left text-[#111111] text-sm hover:text-[#6365b9] transition-colors"
             style={{ fontWeight: 700 }}
             title="Click to rename"
           >
@@ -874,7 +874,7 @@ function TaskGroupEditor({
             title={group.locked ? 'Unlock section' : 'Lock section'}
           >
             {group.locked ? (
-              <Lock size={15} className={autoUnlocked ? 'text-green-500' : 'text-[#7f15a8]'} />
+              <Lock size={15} className={autoUnlocked ? 'text-green-500' : 'text-[#6365b9]'} />
             ) : (
               <Unlock size={15} className="text-[#cccccc]" />
             )}
@@ -934,7 +934,7 @@ function TaskGroupEditor({
             onChange={(e) =>
               onUnlockDaysChange(e.target.value ? parseInt(e.target.value) : null)
             }
-            className="w-16 border border-[#eeeeee] rounded-lg px-2 py-1 text-xs text-[#111111] outline-none focus:border-[#7f15a8] text-center"
+            className="w-16 border border-[#eeeeee] rounded-lg px-2 py-1 text-xs text-[#111111] outline-none focus:border-[#6365b9] text-center"
           />
           <span className="text-xs text-[#666666]">days from join date</span>
           {lockStatusText && (
@@ -965,7 +965,7 @@ function TaskGroupEditor({
                   onClick={() => onToggleTask(task.id)}
                   className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl border transition-colors text-left"
                   style={{
-                    borderColor: isSelected ? '#7f15a8' : '#eeeeee',
+                    borderColor: isSelected ? '#6365b9' : '#eeeeee',
                     background: isSelected ? 'var(--brand-gradient-soft)' : '#ffffff',
                   }}
                 >
@@ -974,7 +974,7 @@ function TaskGroupEditor({
                     style={{
                       width: 20,
                       height: 20,
-                      borderColor: isSelected ? '#7f15a8' : '#cccccc',
+                      borderColor: isSelected ? '#6365b9' : '#cccccc',
                       background: isSelected ? 'var(--brand-gradient)' : 'transparent',
                     }}
                   >
@@ -1005,6 +1005,7 @@ function TaskGroupEditor({
     </div>
   );
 }
+
 
 
 

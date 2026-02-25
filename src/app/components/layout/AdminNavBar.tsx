@@ -20,9 +20,9 @@ export function AdminNavBar() {
             onClick={() => navigate(item.path)}
             className="flex-1 py-2 text-sm transition-colors"
             style={{
-              color: active ? '#7f15a8' : '#666666',
+              color: active ? '#6365b9' : '#666666',
               fontWeight: active ? 700 : 400,
-              borderBottom: active ? '2px solid #7f15a8' : '2px solid transparent',
+              borderBottom: active ? '2px solid #6365b9' : '2px solid transparent',
               marginBottom: -1,
             }}
           >
@@ -33,4 +33,5 @@ export function AdminNavBar() {
     </div>
   );
 }
+
 

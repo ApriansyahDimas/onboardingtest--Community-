@@ -54,7 +54,7 @@ export function SectionEditor({
     <div
       onClick={onSelect}
       className={`rounded-xl border transition-all mb-4 ${colorClass} ${
-        isSelected ? 'border-[#7f15a8] shadow-sm' : 'border-[#eeeeee]'
+        isSelected ? 'border-[#6365b9] shadow-sm' : 'border-[#eeeeee]'
       }`}
       style={{ padding: '16px 16px 12px' }}
     >
@@ -70,7 +70,7 @@ export function SectionEditor({
             checked={section.required}
             onChange={(e) => onUpdate({ required: e.target.checked })}
             className="rounded"
-            style={{ accentColor: '#7f15a8' }}
+            style={{ accentColor: '#6365b9' }}
           />
           <span className="text-xs text-[#666666]">Required</span>
         </label>
@@ -89,7 +89,7 @@ export function SectionEditor({
                 height: 10,
                 backgroundColor:
                   section.colorTheme === 'PRIMARY_TINT'
-                    ? '#7f15a8'
+                    ? '#6365b9'
                     : section.colorTheme === 'ACCENT_TINT'
                     ? '#ffde55'
                     : '#ffffff',
@@ -121,7 +121,7 @@ export function SectionEditor({
                       height: 12,
                       backgroundColor:
                         opt.value === 'PRIMARY_TINT'
-                          ? '#7f15a8'
+                          ? '#6365b9'
                           : opt.value === 'ACCENT_TINT'
                           ? '#ffde55'
                           : '#ffffff',
@@ -130,7 +130,7 @@ export function SectionEditor({
                   {opt.label}
                   {section.colorTheme === opt.value && (
                     <svg className="ml-auto" width="12" height="10" viewBox="0 0 12 10" fill="none">
-                      <path d="M1 5L4.5 8.5L11 1" stroke="#7f15a8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M1 5L4.5 8.5L11 1" stroke="#6365b9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   )}
                 </button>
@@ -256,7 +256,7 @@ function SectionBody({
             placeholder="Caption (optional)"
             value={(d.caption as string) ?? ''}
             onChange={(e) => updateData('caption', e.target.value)}
-            className="w-full border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#111111] outline-none focus:border-[#7f15a8]"
+            className="w-full border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#111111] outline-none focus:border-[#6365b9]"
           />
         </div>
       );
@@ -270,7 +270,7 @@ function SectionBody({
             placeholder="YouTube URL"
             value={(d.url as string) ?? ''}
             onChange={(e) => updateData('url', e.target.value)}
-            className="w-full border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#111111] outline-none focus:border-[#7f15a8]"
+            className="w-full border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#111111] outline-none focus:border-[#6365b9]"
           />
           {embedUrl && (
             <div className="rounded-lg overflow-hidden" style={{ aspectRatio: '16/9' }}>
@@ -295,14 +295,14 @@ function SectionBody({
             placeholder="Location name or Google Maps embed URL"
             value={(d.location as string) ?? ''}
             onChange={(e) => updateData('location', e.target.value)}
-            className="w-full border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#111111] outline-none focus:border-[#7f15a8]"
+            className="w-full border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#111111] outline-none focus:border-[#6365b9]"
           />
           <input
             type="text"
             placeholder="Embed URL (iframe src)"
             value={(d.embedUrl as string) ?? ''}
             onChange={(e) => updateData('embedUrl', e.target.value)}
-            className="w-full border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#111111] outline-none focus:border-[#7f15a8]"
+            className="w-full border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#111111] outline-none focus:border-[#6365b9]"
           />
           {d.embedUrl && (
             <div className="rounded-lg overflow-hidden" style={{ height: 200 }}>
@@ -326,7 +326,7 @@ function SectionBody({
             placeholder="Question"
             value={(d.question as string) ?? ''}
             onChange={(e) => updateData('question', e.target.value)}
-            className="w-full border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#111111] font-medium outline-none focus:border-[#7f15a8]"
+            className="w-full border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#111111] font-medium outline-none focus:border-[#6365b9]"
           />
           <div className="space-y-2">
             {options.map((opt, i) => (
@@ -337,7 +337,7 @@ function SectionBody({
                   checked={d.correctOptionId === opt.id}
                   onChange={() => updateData('correctOptionId', opt.id)}
                   title="Mark as correct"
-                  style={{ accentColor: '#7f15a8' }}
+                  style={{ accentColor: '#6365b9' }}
                 />
                 <input
                   type="text"
@@ -349,7 +349,7 @@ function SectionBody({
                     updateData('options', newOpts);
                   }}
                   placeholder={`Option ${i + 1}`}
-                  className="flex-1 border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#111111] outline-none focus:border-[#7f15a8]"
+                  className="flex-1 border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#111111] outline-none focus:border-[#6365b9]"
                 />
                 <button
                   type="button"
@@ -368,7 +368,7 @@ function SectionBody({
             onClick={() =>
               updateData('options', [...options, { id: generateId(), label: '' }])
             }
-            className="text-sm text-[#7f15a8] hover:underline"
+            className="text-sm text-[#6365b9] hover:underline"
           >
             + Add option
           </button>
@@ -385,7 +385,7 @@ function SectionBody({
             placeholder="Question"
             value={(d.question as string) ?? ''}
             onChange={(e) => updateData('question', e.target.value)}
-            className="w-full border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#111111] font-medium outline-none focus:border-[#7f15a8]"
+            className="w-full border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#111111] font-medium outline-none focus:border-[#6365b9]"
           />
           <div className="flex items-center gap-4">
             <span className="text-sm text-[#666666]">Correct answer:</span>
@@ -396,7 +396,7 @@ function SectionBody({
                   name={`yesno-${section.id}`}
                   checked={d.correctAnswer === val}
                   onChange={() => updateData('correctAnswer', val)}
-                  style={{ accentColor: '#7f15a8' }}
+                  style={{ accentColor: '#6365b9' }}
                 />
                 <span className="text-sm text-[#111111]">{val ? 'Yes' : 'No'}</span>
               </label>
@@ -407,7 +407,7 @@ function SectionBody({
                 name={`yesno-${section.id}`}
                 checked={d.correctAnswer === null}
                 onChange={() => updateData('correctAnswer', null)}
-                style={{ accentColor: '#7f15a8' }}
+                style={{ accentColor: '#6365b9' }}
               />
               <span className="text-sm text-[#666666]">None</span>
             </label>
@@ -423,14 +423,14 @@ function SectionBody({
             placeholder="Prompt / question"
             value={(d.prompt as string) ?? ''}
             onChange={(e) => updateData('prompt', e.target.value)}
-            className="w-full border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#111111] font-medium outline-none focus:border-[#7f15a8]"
+            className="w-full border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#111111] font-medium outline-none focus:border-[#6365b9]"
           />
           <input
             type="text"
             placeholder="Placeholder text (optional)"
             value={(d.placeholder as string) ?? ''}
             onChange={(e) => updateData('placeholder', e.target.value)}
-            className="w-full border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#666666] outline-none focus:border-[#7f15a8]"
+            className="w-full border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#666666] outline-none focus:border-[#6365b9]"
           />
           <div className="flex items-center gap-2">
             <span className="text-sm text-[#666666]">Max length:</span>
@@ -441,7 +441,7 @@ function SectionBody({
               onChange={(e) =>
                 updateData('maxLength', e.target.value ? Number(e.target.value) : null)
               }
-              className="w-24 border border-[#eeeeee] rounded-lg px-3 py-1 text-sm text-[#111111] outline-none focus:border-[#7f15a8]"
+              className="w-24 border border-[#eeeeee] rounded-lg px-3 py-1 text-sm text-[#111111] outline-none focus:border-[#6365b9]"
             />
           </div>
           <textarea
@@ -462,7 +462,7 @@ function SectionBody({
             placeholder="Question"
             value={(d.question as string) ?? ''}
             onChange={(e) => updateData('question', e.target.value)}
-            className="w-full border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#111111] font-medium outline-none focus:border-[#7f15a8]"
+            className="w-full border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#111111] font-medium outline-none focus:border-[#6365b9]"
           />
           <div className="grid grid-cols-2 gap-3">
             {imgOptions.map((opt, i) => (
@@ -476,7 +476,7 @@ function SectionBody({
                     name={`img-correct-${section.id}`}
                     checked={d.correctOptionId === opt.id}
                     onChange={() => updateData('correctOptionId', opt.id)}
-                    style={{ accentColor: '#7f15a8' }}
+                    style={{ accentColor: '#6365b9' }}
                     title="Mark correct"
                   />
                   <button
@@ -540,7 +540,7 @@ function SectionBody({
                     );
                     updateData('options', newOpts);
                   }}
-                  className="w-full border border-[#eeeeee] rounded px-2 py-1 text-xs outline-none focus:border-[#7f15a8]"
+                  className="w-full border border-[#eeeeee] rounded px-2 py-1 text-xs outline-none focus:border-[#6365b9]"
                 />
               </div>
             ))}
@@ -556,7 +556,7 @@ function SectionBody({
                 { id: generateId(), imageUrl: '', label: '' },
               ])
             }
-            className="text-sm text-[#7f15a8] hover:underline"
+            className="text-sm text-[#6365b9] hover:underline"
           >
             + Add image option
           </button>
@@ -572,7 +572,7 @@ function SectionBody({
             placeholder="Prompt / instructions"
             value={(d.prompt as string) ?? ''}
             onChange={(e) => updateData('prompt', e.target.value)}
-            className="w-full border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#111111] font-medium outline-none focus:border-[#7f15a8]"
+            className="w-full border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#111111] font-medium outline-none focus:border-[#6365b9]"
           />
           <div className="flex items-center gap-3">
             <div className="flex-1">
@@ -582,7 +582,7 @@ function SectionBody({
                 placeholder="e.g. .pdf,.jpg (blank = any)"
                 value={(d.allowedTypes as string) ?? ''}
                 onChange={(e) => updateData('allowedTypes', e.target.value)}
-                className="w-full border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#111111] outline-none focus:border-[#7f15a8]"
+                className="w-full border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#111111] outline-none focus:border-[#6365b9]"
               />
             </div>
             <div>
@@ -592,7 +592,7 @@ function SectionBody({
                 placeholder="10"
                 value={(d.maxSizeMB as number) ?? ''}
                 onChange={(e) => updateData('maxSizeMB', Number(e.target.value))}
-                className="w-20 border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#111111] outline-none focus:border-[#7f15a8]"
+                className="w-20 border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#111111] outline-none focus:border-[#6365b9]"
               />
             </div>
           </div>
@@ -606,5 +606,6 @@ function SectionBody({
       return null;
   }
 }
+
 
 

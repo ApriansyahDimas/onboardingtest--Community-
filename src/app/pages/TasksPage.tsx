@@ -101,7 +101,7 @@ export function TasksPage() {
                 {!locked && group.unlockAfterDays !== null && currentUser.joinDate && (
                   <span
                     className="text-xs px-2 py-1 rounded-full"
-                    style={{ background: 'var(--brand-gradient-soft)', color: '#7f15a8' }}
+                    style={{ background: 'var(--brand-gradient-soft)', color: '#6365b9' }}
                   >
                     Day {daysSince(currentUser.joinDate)}
                   </span>
@@ -155,5 +155,6 @@ function EmptyState() {
     </div>
   );
 }
+
 
 

@@ -1,0 +1,21 @@
+{
+  "name": "Onboarding Imajin",
+  "short_name": "Imajin",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/pwa-icon-192.png",
+      "sizes": "any",
+      "type": "image/png"
+    },
+    {
+      "src": "/pwa-icon-512.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}

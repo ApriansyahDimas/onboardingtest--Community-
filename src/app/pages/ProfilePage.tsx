@@ -42,7 +42,7 @@ export function ProfilePage() {
       field: 'name',
       label: 'Full name',
       value: currentUser.name,
-      icon: <User size={18} className="text-[#7f15a8] flex-shrink-0" />,
+      icon: <User size={18} className="text-[#6365b9] flex-shrink-0" />,
       editable: false,
     },
     {
@@ -50,7 +50,7 @@ export function ProfilePage() {
       label: 'Email',
       value: currentUser.email,
       icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7f15a8" strokeWidth="2" className="flex-shrink-0">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6365b9" strokeWidth="2" className="flex-shrink-0">
           <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
           <polyline points="22,6 12,13 2,6" />
         </svg>
@@ -61,28 +61,28 @@ export function ProfilePage() {
       field: 'position',
       label: 'Position',
       value: currentUser.position ?? '',
-      icon: <Briefcase size={18} className="text-[#7f15a8] flex-shrink-0" />,
+      icon: <Briefcase size={18} className="text-[#6365b9] flex-shrink-0" />,
       editable: true,
     },
     {
       field: 'department',
       label: 'Department',
       value: currentUser.department ?? '',
-      icon: <Building size={18} className="text-[#7f15a8] flex-shrink-0" />,
+      icon: <Building size={18} className="text-[#6365b9] flex-shrink-0" />,
       editable: true,
     },
     {
       field: 'phone',
       label: 'Phone',
       value: currentUser.phone ?? '',
-      icon: <Phone size={18} className="text-[#7f15a8] flex-shrink-0" />,
+      icon: <Phone size={18} className="text-[#6365b9] flex-shrink-0" />,
       editable: true,
     },
     {
       field: 'role',
       label: 'Role',
       value: currentUser.role === 'ADMIN' ? 'Administrator' : 'Employee',
-      icon: <Shield size={18} className="text-[#7f15a8] flex-shrink-0" />,
+      icon: <Shield size={18} className="text-[#6365b9] flex-shrink-0" />,
       editable: false,
     },
   ];
@@ -116,7 +116,7 @@ export function ProfilePage() {
           className="mt-2 text-xs px-3 py-1 rounded-full"
           style={{
             background: currentUser.role === 'ADMIN' ? 'var(--brand-gradient-soft)' : '#f5f5f5',
-            color: currentUser.role === 'ADMIN' ? '#7f15a8' : '#666666',
+            color: currentUser.role === 'ADMIN' ? '#6365b9' : '#666666',
             fontWeight: 600,
           }}
         >
@@ -139,7 +139,7 @@ export function ProfilePage() {
                   <p className="text-xs text-[#999999]">Day</p>
                   <p
                     className="text-sm"
-                    style={{ fontWeight: 700, color: '#7f15a8' }}
+                    style={{ fontWeight: 700, color: '#6365b9' }}
                   >
                     {daysOnboarded}
                   </p>
@@ -170,12 +170,12 @@ export function ProfilePage() {
                       if (e.key === 'Enter') saveEdit();
                       if (e.key === 'Escape') setEditingField(null);
                     }}
-                    className="flex-1 text-sm text-[#111111] border-b border-[#7f15a8] outline-none bg-transparent py-0.5"
+                    className="flex-1 text-sm text-[#111111] border-b border-[#6365b9] outline-none bg-transparent py-0.5"
                   />
                   <button
                     type="button"
                     onClick={saveEdit}
-                    className="text-xs text-[#7f15a8]"
+                    className="text-xs text-[#6365b9]"
                     style={{ fontWeight: 600 }}
                   >
                     Save
@@ -198,7 +198,7 @@ export function ProfilePage() {
               <button
                 type="button"
                 onClick={() => startEdit(row.field, row.value)}
-                className="text-xs text-[#7f15a8] flex-shrink-0 hover:opacity-70"
+                className="text-xs text-[#6365b9] flex-shrink-0 hover:opacity-70"
                 style={{ fontWeight: 500 }}
               >
                 Edit
@@ -210,7 +210,7 @@ export function ProfilePage() {
         {/* Join date row */}
         {currentUser.joinDate && (
           <div className="flex items-center gap-3 p-4 rounded-xl border border-[#eeeeee]">
-            <Calendar size={18} className="text-[#7f15a8] flex-shrink-0" />
+            <Calendar size={18} className="text-[#6365b9] flex-shrink-0" />
             <div className="flex-1 min-w-0">
               <p className="text-xs text-[#666666]">Join date</p>
               <p className="text-sm text-[#111111]" style={{ fontWeight: 500 }}>
@@ -220,7 +220,7 @@ export function ProfilePage() {
             {daysOnboarded !== null && (
               <span
                 className="text-xs px-2 py-1 rounded-full flex-shrink-0"
-                style={{ background: 'var(--brand-gradient-soft)', color: '#7f15a8', fontWeight: 600 }}
+                style={{ background: 'var(--brand-gradient-soft)', color: '#6365b9', fontWeight: 600 }}
               >
                 Day {daysOnboarded}
               </span>
@@ -252,6 +252,7 @@ export function ProfilePage() {
     </div>
   );
 }
+
 
 
 

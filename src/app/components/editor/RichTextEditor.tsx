@@ -13,7 +13,7 @@ interface RichTextEditorProps {
 
 const COLORS = [
   { label: 'Black', value: '#111111' },
-  { label: 'Primary', value: '#7f15a8' },
+  { label: 'Primary', value: '#6365b9' },
   { label: 'Gray', value: '#666666' },
   { label: 'Red', value: '#e53e3e' },
   { label: 'Green', value: '#38a169' },
@@ -141,7 +141,7 @@ export function RichTextEditor({ content, onChange }: RichTextEditorProps) {
                 height: 16,
                 backgroundColor: c.value,
                 outline: editor.isActive('textStyle', { color: c.value })
-                  ? '2px solid #7f15a8'
+                  ? '2px solid #6365b9'
                   : 'none',
                 outlineOffset: 1,
               }}
@@ -161,7 +161,7 @@ export function RichTextEditor({ content, onChange }: RichTextEditorProps) {
         .tiptap h2 { font-size: 1.375rem; font-weight: 700; margin: 0.5em 0; }
         .tiptap h3 { font-size: 1.125rem; font-weight: 600; margin: 0.5em 0; }
         .tiptap p { margin: 0.25em 0; }
-        .tiptap blockquote { border-left: 3px solid #7f15a8; padding-left: 12px; color: #666666; margin: 0.5em 0; }
+        .tiptap blockquote { border-left: 3px solid #6365b9; padding-left: 12px; color: #666666; margin: 0.5em 0; }
         .tiptap strong { font-weight: 700; }
         .tiptap em { font-style: italic; }
         .tiptap u { text-decoration: underline; }
@@ -169,5 +169,6 @@ export function RichTextEditor({ content, onChange }: RichTextEditorProps) {
     </div>
   );
 }
+
 
 

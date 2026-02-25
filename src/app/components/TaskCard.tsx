@@ -19,7 +19,7 @@ const STATUS_LABEL: Record<string, string> = {
 
 const STATUS_COLOR: Record<string, string> = {
   NOT_STARTED: 'text-[#666666]',
-  IN_PROGRESS: 'text-[#7f15a8]',
+  IN_PROGRESS: 'text-[#6365b9]',
   COMPLETED: 'text-green-600',
 };
 
@@ -44,13 +44,13 @@ export function TaskCard({
         className="flex items-center w-full rounded-xl border px-4 transition-colors"
         style={{
           height: 80,
-          borderColor: selected ? '#7f15a8' : '#eeeeee',
+          borderColor: selected ? '#6365b9' : '#eeeeee',
           background: locked
             ? '#f9f9f9'
             : selected
             ? 'var(--brand-gradient-soft)'
             : '#ffffff',
-          boxShadow: selected ? '0 0 0 2px #7f15a8' : 'none',
+          boxShadow: selected ? '0 0 0 2px #6365b9' : 'none',
           opacity: locked ? 0.7 : 1,
         }}
       >
@@ -60,7 +60,7 @@ export function TaskCard({
             style={{
               width: 22,
               height: 22,
-              borderColor: selected ? '#7f15a8' : '#cccccc',
+              borderColor: selected ? '#6365b9' : '#cccccc',
               background: selected ? 'var(--brand-gradient)' : 'transparent',
             }}
           >
@@ -133,10 +133,10 @@ function TaskThumbnail({ task }: { task: Task }) {
               'linear-gradient(135deg, rgba(99,101,185,0.14) 0%, rgba(99,101,185,0.04) 100%)',
           }}
         >
-          <FileText size={14} className="text-[#7f15a8]" />
+          <FileText size={14} className="text-[#6365b9]" />
           <span
             className="mt-0.5 text-[10px] leading-none uppercase tracking-wide"
-            style={{ color: '#7f15a8', fontWeight: 700 }}
+            style={{ color: '#6365b9', fontWeight: 700 }}
           >
             Task
           </span>
@@ -145,5 +145,6 @@ function TaskThumbnail({ task }: { task: Task }) {
     </div>
   );
 }
+
 
 

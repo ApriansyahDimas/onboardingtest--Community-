@@ -107,7 +107,7 @@ function SectionContent({
                 onClick={() => onAnswer(selected === opt.id ? undefined : opt.id)}
                 className="w-full text-left flex items-center gap-3 px-4 py-3 rounded-xl border transition-colors"
                 style={{
-                  borderColor: selected === opt.id ? '#7f15a8' : '#eeeeee',
+                  borderColor: selected === opt.id ? '#6365b9' : '#eeeeee',
                   background: selected === opt.id ? 'var(--brand-gradient-soft)' : '#ffffff',
                 }}
               >
@@ -116,7 +116,7 @@ function SectionContent({
                   style={{
                     width: 20,
                     height: 20,
-                    borderColor: selected === opt.id ? '#7f15a8' : '#cccccc',
+                    borderColor: selected === opt.id ? '#6365b9' : '#cccccc',
                   }}
                 >
                   {selected === opt.id && (
@@ -151,7 +151,7 @@ function SectionContent({
                 className="flex-1 py-3 rounded-xl border text-sm transition-colors"
                 style={{
                   fontWeight: 600,
-                  borderColor: ans === val ? '#7f15a8' : '#eeeeee',
+                  borderColor: ans === val ? '#6365b9' : '#eeeeee',
                   background: ans === val ? 'var(--brand-gradient)' : '#ffffff',
                   color: ans === val ? '#ffffff' : '#111111',
                 }}
@@ -179,7 +179,7 @@ function SectionContent({
             placeholder={(d.placeholder as string) ?? 'Write your answer here...'}
             maxLength={maxLen ?? undefined}
             rows={4}
-            className="w-full border border-[#eeeeee] rounded-xl px-3 py-3 text-sm text-[#111111] outline-none resize-none focus:border-[#7f15a8] bg-white"
+            className="w-full border border-[#eeeeee] rounded-xl px-3 py-3 text-sm text-[#111111] outline-none resize-none focus:border-[#6365b9] bg-white"
           />
           {maxLen && (
             <p className="text-xs text-[#666666] text-right">
@@ -207,8 +207,8 @@ function SectionContent({
                 onClick={() => onAnswer(selected === opt.id ? undefined : opt.id)}
                 className="rounded-xl border overflow-hidden transition-all text-left"
                 style={{
-                  borderColor: selected === opt.id ? '#7f15a8' : '#eeeeee',
-                  boxShadow: selected === opt.id ? '0 0 0 2px #7f15a8' : 'none',
+                  borderColor: selected === opt.id ? '#6365b9' : '#eeeeee',
+                  boxShadow: selected === opt.id ? '0 0 0 2px #6365b9' : 'none',
                 }}
               >
                 {opt.imageUrl ? (
@@ -281,7 +281,7 @@ function UploadFileSection({
       {fileAnswer ? (
         <div className="flex items-center gap-3 p-3 border border-[#eeeeee] rounded-xl bg-white">
           <div
-            className="flex items-center justify-center rounded-lg brand-gradient-bg-soft text-[#7f15a8] flex-shrink-0"
+            className="flex items-center justify-center rounded-lg brand-gradient-bg-soft text-[#6365b9] flex-shrink-0"
             style={{ width: 40, height: 40 }}
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -317,7 +317,7 @@ function UploadFileSection({
           }}
           className="flex flex-col items-center justify-center border-2 border-dashed rounded-xl cursor-pointer transition-colors"
           style={{
-            borderColor: isDragging ? '#7f15a8' : '#eeeeee',
+            borderColor: isDragging ? '#6365b9' : '#eeeeee',
             background: isDragging ? 'var(--brand-gradient-soft-08)' : '#fafafa',
             padding: '24px',
           }}
@@ -348,6 +348,7 @@ function UploadFileSection({
     </div>
   );
 }
+
 
 
 

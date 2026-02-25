@@ -1,0 +1,41 @@
+
+> @figma/my-make-file@0.0.1 dev
+> vite --host 0.0.0.0 --port 5173
+
+
+  [32m[1mVITE[22m v6.3.5[39m  [2mready in [0m[1m450[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+  [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.110.86:[1m5173[22m/[39m
+[2m8:56:35 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mindex.html[22m
+[2m8:56:40 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
+[2m9:05:59 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\IMAJIN\Downloads\onboarding\onboardingtest--Community-\src\app\pages\LoginPage.tsx, /src/styles/index.css[22m
+[2m9:07:28 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2mindex.html[22m
+
+C:\Users\IMAJIN\Downloads\onboarding\onboardingtest--Community->[2m9:11:05 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\IMAJIN\Downloads\onboarding\onboardingtest--Community-\src\app\pages\admin\TaskBuilderPage.tsx, /src/styles/index.css[22m
+[2m9:18:36 PM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\IMAJIN\Downloads\onboarding\onboardingtest--Community-\src\app\pages\admin\TaskBuilderPage.tsx, /src/styles/index.css[22m
+[2m6:38:50 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
+[2m6:38:50 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/src/styles/index.css[22m
+[2m6:38:50 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\IMAJIN\Downloads\onboarding\onboardingtest--Community-\src\app\pages\DashboardPage.tsx, /src/styles/index.css[22m
+[2m6:38:50 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\IMAJIN\Downloads\onboarding\onboardingtest--Community-\src\app\pages\KnowledgePage.tsx, /src/styles/index.css[22m
+[2m6:38:50 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\IMAJIN\Downloads\onboarding\onboardingtest--Community-\src\app\pages\LoginPage.tsx, /src/styles/index.css[22m
+[2m6:38:50 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/assets/imajin-logo.svg[22m
+[2m6:38:50 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\IMAJIN\Downloads\onboarding\onboardingtest--Community-\src\app\pages\ProfilePage.tsx, /src/styles/index.css[22m
+[2m6:38:50 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\IMAJIN\Downloads\onboarding\onboardingtest--Community-\src\app\pages\TasksPage.tsx, /src/styles/index.css[22m
+[2m6:38:50 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\IMAJIN\Downloads\onboarding\onboardingtest--Community-\src\app\pages\admin\AdminTasksPage.tsx, /src/styles/index.css[22m
+[2m6:38:50 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\IMAJIN\Downloads\onboarding\onboardingtest--Community-\src\app\components\editor\RichTextEditor.tsx, /src/styles/index.css[22m
+[2m6:38:50 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\IMAJIN\Downloads\onboarding\onboardingtest--Community-\src\app\components\ProgressRing.tsx, /src/styles/index.css[22m
+[2m6:38:50 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/layout/AdminNavBar.tsx[22m
+[2m6:38:50 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\IMAJIN\Downloads\onboarding\onboardingtest--Community-\src\app\pages\admin\AdminUsersPage.tsx, /src/styles/index.css[22m
+[2m6:38:50 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\IMAJIN\Downloads\onboarding\onboardingtest--Community-\src\app\pages\admin\TaskBuilderPage.tsx, /src/styles/index.css[22m
+[2m6:38:50 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\IMAJIN\Downloads\onboarding\onboardingtest--Community-\src\app\components\TaskCard.tsx, /src/styles/index.css[22m
+[2m6:38:50 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\IMAJIN\Downloads\onboarding\onboardingtest--Community-\src\app\components\sections\SectionEditor.tsx, /src/styles/index.css[22m
+[2m6:38:50 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/layout/FooterBar.tsx[22m
+[2m6:38:50 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\IMAJIN\Downloads\onboarding\onboardingtest--Community-\src\app\components\sections\SectionRenderer.tsx, /src/styles/index.css[22m
+[2m6:38:50 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\IMAJIN\Downloads\onboarding\onboardingtest--Community-\src\app\components\layout\BottomNavBar.tsx, /src/styles/index.css[22m
+[2m6:38:50 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/layout/UserNavBar.tsx[22m
+[2m6:43:32 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\IMAJIN\Downloads\onboarding\onboardingtest--Community-\src\app\pages\LoginPage.tsx, /src/styles/index.css[22m
+[2m6:43:36 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mpage reload [39m[2msrc/app/components/layout/FooterBar.tsx[22m
+[2m9:43:09 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\IMAJIN\Downloads\onboarding\onboardingtest--Community-\src\app\pages\LoginPage.tsx, /src/styles/index.css[22m
+[2m10:02:05 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\IMAJIN\Downloads\onboarding\onboardingtest--Community-\src\app\pages\LoginPage.tsx, /src/styles/index.css[22m
+[2m10:03:14 AM[22m [36m[1m[vite][22m[39m [90m[2m(client)[22m[39m [32mhmr update [39m[2m/@fs/C:\Users\IMAJIN\Downloads\onboarding\onboardingtest--Community-\src\app\pages\LoginPage.tsx, /src/styles/index.css[22m

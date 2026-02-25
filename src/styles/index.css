@@ -3,9 +3,42 @@
 @import './theme.css';
 
 :root {
-  --brand-gradient: #7f15a8;
-  --brand-gradient-soft: rgba(127, 21, 168, 0.14);
-  --brand-gradient-soft-08: rgba(127, 21, 168, 0.08);
+  --brand-gradient: #6365b9;
+  --brand-gradient-soft: rgba(99, 101, 185, 0.14);
+  --brand-gradient-soft-08: rgba(99, 101, 185, 0.08);
+}
+
+html,
+body,
+#root {
+  min-height: 100dvh;
+}
+
+body {
+  margin: 0;
+  overscroll-behavior: none;
+  padding-top: env(safe-area-inset-top);
+  padding-right: env(safe-area-inset-right);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  font-family: var(--font-ui);
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-ui);
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
 }
 
 .brand-gradient-bg {
@@ -34,4 +67,5 @@
   width: 0;
   height: 0;
 }
+
 

@@ -83,7 +83,7 @@ export function AppShell() {
           <div
             style={{
               height: '100vh',
-              paddingTop: 72,
+              paddingTop: 80,
               paddingBottom: 64,
               background: 'var(--brand-gradient)',
             }}

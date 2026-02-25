@@ -2,7 +2,7 @@ import { useState, useCallback, useRef, useEffect, type ChangeEvent } from 'reac
 import { useParams, useNavigate } from 'react-router';
 import {
   Type, Image, Youtube, Map, Plus, MoreVertical,
-  ArrowLeft, ChevronDown, Trash2, X
+  ArrowLeft, Trash2, X
 } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { SectionEditor } from '../../components/sections/SectionEditor';
@@ -39,12 +39,10 @@ export function TaskBuilderPage() {
   const [pageIndex, setPageIndex] = useState(0);
   const [selectedSectionId, setSelectedSectionId] = useState<string | null>(null);
   const [showMoreMenu, setShowMoreMenu] = useState(false);
-  const [showInsertMenu, setShowInsertMenu] = useState(false);
   const [titleEditing, setTitleEditing] = useState(false);
   const [titleValue, setTitleValue] = useState(task?.title ?? '');
   const [coverUploadError, setCoverUploadError] = useState('');
   const moreMenuRef = useRef<HTMLDivElement>(null);
-  const insertMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (task) setTitleValue(task.title);
@@ -68,9 +66,6 @@ export function TaskBuilderPage() {
     const handleClick = (e: MouseEvent) => {
       if (moreMenuRef.current && !moreMenuRef.current.contains(e.target as Node)) {
         setShowMoreMenu(false);
-      }
-      if (insertMenuRef.current && !insertMenuRef.current.contains(e.target as Node)) {
-        setShowInsertMenu(false);
       }
     };
     document.addEventListener('mousedown', handleClick);
@@ -112,7 +107,6 @@ export function TaskBuilderPage() {
   const addSection = (type: SectionType) => {
     if (!currentPage) return;
     createSection(currentPage.id, type);
-    setShowInsertMenu(false);
     setShowMoreMenu(false);
   };
 
@@ -160,7 +154,7 @@ export function TaskBuilderPage() {
                   saveTitle(e.target.value);
                 }}
                 onBlur={() => setTitleEditing(false)}
-                className="flex-1 text-[#111111] outline-none border-b border-[#7f15a8] px-1 bg-transparent"
+                className="flex-1 text-[#111111] outline-none border-b border-[#6365b9] px-1 bg-transparent"
                 style={{ fontWeight: 700, fontSize: '1rem' }}
               />
             ) : (
@@ -178,60 +172,31 @@ export function TaskBuilderPage() {
           </div>
 
           {/* Row 2: section type toolbar */}
-          <div
-            className="flex items-center overflow-x-auto px-2 pb-2 gap-1"
-            style={{ scrollbarWidth: 'none' }}
-          >
-            {/* Insert button */}
-            <div className="relative flex-shrink-0" ref={insertMenuRef}>
-              <button
-                type="button"
-                onClick={() => { setShowInsertMenu((v) => !v); setShowMoreMenu(false); }}
-                className="flex items-center gap-1 px-3 py-2 rounded-xl border border-[#eeeeee] text-xs text-[#111111] hover:bg-[#f5f5f5] transition-colors"
-                style={{ minHeight: 36 }}
-              >
-                <Plus size={13} />
-                Insert
-                <ChevronDown size={11} />
-              </button>
-              {showInsertMenu && (
-                <div
-                  className="absolute top-10 left-0 z-50 bg-white border border-[#eeeeee] rounded-xl shadow-lg py-1"
-                  style={{ minWidth: 180 }}
+          <div className="flex items-center px-2 pb-2 gap-1">
+            <div
+              className="flex items-center gap-1 overflow-x-auto min-w-0 flex-1"
+              style={{ scrollbarWidth: 'none' }}
+            >
+              {/* Quick-add buttons */}
+              {TOOLBAR_SECTIONS.map((s) => (
+                <button
+                  key={s.type}
+                  type="button"
+                  onClick={() => addSection(s.type)}
+                  className="flex items-center gap-1 px-3 py-2 rounded-xl border border-[#eeeeee] text-xs text-[#111111] hover:bg-[#f5f5f5] transition-colors flex-shrink-0"
+                  style={{ minHeight: 36 }}
                 >
-                  {[...TOOLBAR_SECTIONS, ...MORE_SECTIONS].map((s) => (
-                    <button
-                      key={s.type}
-                      type="button"
-                      onClick={() => addSection(s.type)}
-                      className="w-full text-left px-4 py-2.5 text-sm text-[#111111] hover:bg-[#f5f5f5]"
-                    >
-                      {s.label}
-                    </button>
-                  ))}
-                </div>
-              )}
+                  {s.icon}
+                  {s.label}
+                </button>
+              ))}
             </div>
 
-            {/* Quick-add buttons */}
-            {TOOLBAR_SECTIONS.map((s) => (
-              <button
-                key={s.type}
-                type="button"
-                onClick={() => addSection(s.type)}
-                className="flex items-center gap-1 px-3 py-2 rounded-xl border border-[#eeeeee] text-xs text-[#111111] hover:bg-[#f5f5f5] transition-colors flex-shrink-0"
-                style={{ minHeight: 36 }}
-              >
-                {s.icon}
-                {s.label}
-              </button>
-            ))}
-
             {/* More menu */}
-            <div className="relative flex-shrink-0 ml-auto" ref={moreMenuRef}>
+            <div className="relative flex-shrink-0" ref={moreMenuRef}>
               <button
                 type="button"
-                onClick={() => { setShowMoreMenu((v) => !v); setShowInsertMenu(false); }}
+                onClick={() => setShowMoreMenu((v) => !v)}
                 className="flex items-center justify-center p-2 rounded-xl border border-[#eeeeee] text-[#111111] hover:bg-[#f5f5f5] transition-colors"
                 style={{ width: 36, height: 36 }}
               >
@@ -263,8 +228,8 @@ export function TaskBuilderPage() {
       >
         {/* Opening Page editor */}
         {task.includeOpeningPage && (
-          <div className="mb-4 rounded-xl border border-[#7f15a8]/30 p-4 brand-gradient-bg-soft">
-            <p className="text-xs text-[#7f15a8] mb-3" style={{ fontWeight: 600 }}>
+          <div className="mb-4 rounded-xl border border-[#6365b9]/30 p-4 brand-gradient-bg-soft">
+            <p className="text-xs text-[#6365b9] mb-3" style={{ fontWeight: 600 }}>
               Opening Page
             </p>
             <div className="space-y-3">
@@ -317,7 +282,7 @@ export function TaskBuilderPage() {
                   value={task.openingCaption ?? ''}
                   onChange={(e) => updateTask(task.id, { openingCaption: e.target.value })}
                   placeholder="Welcome message..."
-                  className="w-full border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#111111] outline-none focus:border-[#7f15a8] mt-1"
+                  className="w-full border border-[#eeeeee] rounded-lg px-3 py-2 text-sm text-[#111111] outline-none focus:border-[#6365b9] mt-1"
                 />
               </div>
             </div>
@@ -342,12 +307,12 @@ export function TaskBuilderPage() {
         {/* Add section row */}
         <button
           type="button"
-          onClick={() => setShowInsertMenu(true)}
-          className="w-full flex items-center justify-center border-2 border-dashed border-[#eeeeee] rounded-xl hover:border-[#7f15a8] hover-brand-gradient-bg-soft transition-colors"
+          onClick={() => setShowMoreMenu(true)}
+          className="w-full flex items-center justify-center border-2 border-dashed border-[#eeeeee] rounded-xl hover:border-[#6365b9] hover-brand-gradient-bg-soft transition-colors"
           style={{ height: 56 }}
         >
-          <Plus size={16} className="text-[#7f15a8] mr-2" />
-          <span className="text-sm text-[#7f15a8]">Add section</span>
+          <Plus size={16} className="text-[#6365b9] mr-2" />
+          <span className="text-sm text-[#6365b9]">Add section</span>
         </button>
       </div>
 
@@ -429,7 +394,7 @@ function MoreMenuPanel({
         </p>
       </div>
 
-      {/* B: Insert additional sections */}
+      {/* B: Insert sections */}
       <div className="px-4 py-3 border-b border-[#eeeeee]">
         <p
           className="text-xs text-[#666666] mb-2"
@@ -438,7 +403,7 @@ function MoreMenuPanel({
           Insert section
         </p>
         <div className="space-y-1">
-          {MORE_SECTIONS.map((s) => (
+          {[...TOOLBAR_SECTIONS, ...MORE_SECTIONS].map((s) => (
             <button
               key={s.type}
               type="button"
@@ -463,7 +428,7 @@ function MoreMenuPanel({
           <div className="flex gap-2">
             {[
               { value: 'DEFAULT', label: 'Default', bg: '#ffffff', border: '#cccccc' },
-              { value: 'PRIMARY_TINT', label: 'Primary', bg: '#7f15a8', border: '#7f15a8' },
+              { value: 'PRIMARY_TINT', label: 'Primary', bg: '#6365b9', border: '#6365b9' },
               { value: 'ACCENT_TINT', label: 'Accent', bg: '#ffde55', border: '#cccc00' },
             ].map((opt) => (
               <button
@@ -477,10 +442,10 @@ function MoreMenuPanel({
                   height: 28,
                   backgroundColor: opt.bg,
                   borderColor:
-                    selectedSection.colorTheme === opt.value ? '#7f15a8' : opt.border,
+                    selectedSection.colorTheme === opt.value ? '#6365b9' : opt.border,
                   boxShadow:
                     selectedSection.colorTheme === opt.value
-                      ? '0 0 0 2px #7f15a8'
+                      ? '0 0 0 2px #6365b9'
                       : 'none',
                 }}
               >
@@ -490,7 +455,7 @@ function MoreMenuPanel({
                       d="M1 5L4.5 8.5L11 1"
                       stroke={
                         opt.value === 'DEFAULT'
-                          ? '#7f15a8'
+                          ? '#6365b9'
                           : opt.value === 'ACCENT_TINT'
                           ? '#333'
                           : 'white'
@@ -523,6 +488,7 @@ function MoreMenuPanel({
     </div>
   );
 }
+
 
 
 
